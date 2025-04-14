@@ -1,3 +1,25 @@
+# kotlin to Jack byte code 
+![official project](/docs/resource/jack.png)
+![official project](/docs/resource/jack_en.png)
+- **[(impl、ir) --> /compiler/ir/backend.jack/src/org/jetbrains/kotlin/ir/backend/jack](/compiler/ir/backend.jack/src/org/jetbrains/kotlin/ir/backend/jack)**
+- **[(cli、fir、ir) --> /compiler/cli/cli-jack/src/org/jetbrains/kotlin/cli/jack](/compiler/cli/cli-jack/src/org/jetbrains/kotlin/cli/jack)**
+- **[(test case) --> /compiler/preloader/src/org/jetbrains/kotlin/preloading/Preloader.java](/compiler/preloader/src/org/jetbrains/kotlin/preloading/Preloader.java)**
+- **[(output result) --> /compilerTestData](/compilerTestData)**
+
+### Compilation process
+
+---
+- 运行环境JDK17 
+- 最新版本的IDEA Settings - langugage -kotlin - enable k2 并确保你的依赖能够正常下载 
+- 项目编译完成后执行 ./gradlew dist 会在根目录生成dist 
+- 参考(test case) --> /compiler/preloader/src/org/jetbrains/kotlin/preloading/Preloader.java 修改main部分命令的实现，修改路径即可
+---
+- Runtime environment: JDK 17
+- Use the latest version of IntelliJ IDEA, go to Settings -> Language -> Kotlin -> Enable K2, and ensure your dependencies can be downloaded successfully.
+- After the project is compiled, execute ./gradlew dist, and the dist directory will be generated in the root folder.
+- Refer to the test case at /compiler/preloader/src/org/jetbrains/kotlin/preloading/Preloader.java to modify the implementation of the main commands. Simply update the file paths as needed.
+
+---
 [![official project](https://jb.gg/badges/official.svg)](https://confluence.jetbrains.com/display/ALL/JetBrains+on+GitHub)
 [![TeamCity (simple build status)](https://img.shields.io/teamcity/http/teamcity.jetbrains.com/s/Kotlin_KotlinPublic_Compiler.svg)](https://teamcity.jetbrains.com/buildConfiguration/Kotlin_KotlinPublic_Compiler?branch=%3Cdefault%3E&buildTypeTab=overview&mode=builds)
 [![Maven Central](https://img.shields.io/maven-central/v/org.jetbrains.kotlin/kotlin-maven-plugin.svg)](https://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.jetbrains.kotlin%22)
